@@ -167,6 +167,8 @@ img {
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
+    border: none;
+    cursor: pointer;
 }
 
 .boton--primario {
@@ -258,4 +260,39 @@ img {
 .curso__label,
 .curso__info {
     font-weight: 2rem;
+}
+
+/** Contacto **/
+.contacto-bg {
+    background-image: url(../img/contacto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40rem;
+}
+
+.formulario {
+    background-color: var(--blanco);
+    width: 95%;
+    margin: -5rem auto 0 auto;
+    padding: 5rem;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.campo__label {
+    flex: 0 0 9rem;
+    text-align: right;
+}
+
+.campo__field {
+    flex: 1;
+    border: 1px solid var(--grisClaro);
+}
+
+.campo__field--textarea {
+    height: 20rem;
 }
