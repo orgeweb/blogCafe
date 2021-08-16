@@ -5,6 +5,7 @@
     --primario: #784d3c;
     --blanco: #fff;
     --negro: #000;
+    --grisClaro: #e1e1e1;
 }
 
 html {
@@ -25,8 +26,7 @@ body {
 
 /** Globales **/
 .contenedor {
-    max-width: 120rem;
-    width: 90%;
+    width: min(90%, 120rem);
     margin: 0 auto;
 }
 
@@ -39,6 +39,7 @@ h2,
 h3,
 h4 {
     font-family: var(--fuenteHeadings);
+    line-height: 1.2;
 }
 
 h1 {
@@ -74,7 +75,7 @@ img {
     text-align: center;
 }
 
-/** Estilos **/
+/** Header **/
 .header {
     background-image: url(../img/banner.jpg);
     height: 60rem;
@@ -83,22 +84,32 @@ img {
     background-position: center center;
 }
 
+.barra {
+    padding-top: 4rem;
+}
+
 .header__texto {
     color: var(--blanco);
     margin-top: 5rem;
+}
+
+.header__heading2 {
+    font-size: 3rem;
 }
 
 @media (min-width: 768px) {
     .header__texto {
         margin-top: 15rem;
     }
-}
 
-@media (min-width: 768px) {
     .barra {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .header__heading2 {
+        font-size: 4rem;
     }
 }
 
@@ -125,4 +136,85 @@ img {
     display: block;
     color: var(--blanco);
     font-size: 1.8rem;
+}
+
+/** Contenido-principal **/
+@media (min-width: 768px) {
+    .contenido-principal {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+}
+
+.entrada {
+    border-bottom: 1px solid var(--grisClaro);
+    margin-bottom: 2rem;
+}
+
+.entrada:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+
+.boton {
+    display: block;
+    color: var(--blanco);
+    font-family: var(--fuenteHeadings);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.boton--primario {
+    background-color: var(--negro);
+}
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+    }
+}
+
+/** Sidebar **/
+.cursos {
+    list-style: none;
+}
+
+.widget-curso {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--grisClaro);
+}
+
+.widget-curso:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.widget-curso__label {
+    font-family: var(--fuenteHeadings);
+    font-weight: 700;
+}
+
+.widget-curso__info {
+    font-weight: 400;
+}
+
+.widget-curso__label,
+.widget-curso__info {
+    font-weight: 2rem;
+}
+
+.boton--secundario {
+    background-color: var(--primario);
+}
+
+/** Footer **/
+.footer {
+    background-color: var(--negro);
+    margin-top: 4rem;
+    padding-bottom: 3rem;
 }
